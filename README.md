@@ -17,7 +17,6 @@ This project is a simple real-time chat interface built using Flutter and Fireba
 
 ### `core/`: Core functionalities such as Firebase initialization, network requests, app-wide configurations, etc.
 - `firebase/`: Firebase setup and configuration.
-- `network/`: Network services to handle API requests.
 - `widgets/`: Commonly used Flutter widgets across the app.
 
 ### `features/`: Main features of the app.
@@ -30,11 +29,18 @@ This project is a simple real-time chat interface built using Flutter and Fireba
 ### Prerequisites
 
 - Flutter 2.x or higher
-- Firebase account and Firebase project set up
 
 ### 1. Clone the repository
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/educatly-flutter.git
+git clone https://github.com/Atevaz/flutter_educatly_task.git
 cd educatly-flutter
+```
+
+## Install dependencies
+Run the following command to get all the dependencies:
+
+```bash
+flutter pub get
+```
