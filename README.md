@@ -1,16 +1,17 @@
-# flutter_educatly_task
+# Educatly 2024 - Flutter Real-Time Chat Application
 
-A new Flutter project.
+This project is a simple real-time chat interface built using Flutter and Firebase, as part of the Educatly 2024 Senior Flutter Developer Task. The application supports user authentication, real-time messaging, online status indicators, and typing indicators, all implemented with Firebase integration.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **User Authentication**: Users can sign up, log in, and log out securely using Firebase Authentication.
+- **Real-Time Messaging**: Sends and receives messages instantly through Firebase Firestore with chat history displayed.
+- **Online Status**: Displays whether a user is online or offline in real time.
+- **Typing Indicators**: Shows when a user is typing a message in real time.
+- **Chat Interface**: User-friendly interface with chat bubbles, avatars, timestamps, and text input fields.
+- **State Management**: Bloc is used to manage application state.
 
-A few resources to get you started if this is your first Flutter project:
+### Optional:
+- **Push Notifications**: Firebase Cloud Messaging is intended to be used to notify users of new messages, but this feature has not been fully implemented yet.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
