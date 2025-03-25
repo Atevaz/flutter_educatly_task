@@ -2,12 +2,13 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter_educatly_task/features/auth/manager/register/register_cubit.dart';
 import 'package:flutter_educatly_task/features/chats/manager/send_message/send_message_cubit.dart';
 import 'package:get_it/get_it.dart';
-
 import '../../features/auth/manager/login/login_cubit.dart';
 import '../../features/chats/manager/get_messages/get_messages_cubit.dart';
 import '../../features/chats/manager/typing/typing_cubit.dart';
 import '../../features/home/manager/all_users/all_users_cubit.dart';
 import '../../features/home/manager/update_user_status/update_user_status_cubit.dart';
+import '../firebase/firebase_auth/firebase_auth_service.dart';
+import '../firebase/firebase_firestore/firestore_service.dart';
 import '../global_cubit/bloc_observer.dart';
 import '../global_cubit/global/global_cubit.dart';
 import '../network/network_service/network_provider.dart';
@@ -112,6 +113,11 @@ Future<void> init() async {
   sl.registerLazySingleton(
     () => SharedPreferencesProvider.instance,
   );
+
+  sl.registerLazySingleton<FirebaseService>(() => FirebaseService());
+
+  sl.registerLazySingleton<FirebaseAuthService>(() => FirebaseAuthService());
+
   sl.registerLazySingleton<PreferenceHelper>(
     () => PreferenceHelper(
       preferencesProvider: sl(),

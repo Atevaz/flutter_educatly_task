@@ -16,7 +16,7 @@ class AllUsersCubit extends Cubit<AllUsersState> {
 
   Future<void> getAllUsers() async {
     emit(GetAllUsersLoadingState());
-    FirebaseFirestore.instance
+    firebaseService.firestore
         .collection('users')
         .snapshots()
         .listen((event) {
@@ -33,11 +33,6 @@ class AllUsersCubit extends Cubit<AllUsersState> {
 
   void changeSelectedUser ({required UserModel user}) {
     selectedUserModel = user ;
-    print(selectedUserModel!.name);
-    print(selectedUserModel!.email);
-    print(selectedUserModel!.deviceToken);
-    print(selectedUserModel!.onlineStatus);
-    print(selectedUserModel!.userId);
     emit(ChangeSelectedUserModelState());
   }
 

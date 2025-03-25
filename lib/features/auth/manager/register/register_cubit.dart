@@ -25,14 +25,14 @@ class RegisterCubit extends Cubit<RegisterState> {
   }) {
     try{
       emit(RegisterLoadingState());
-      FirebaseAuth.instance.createUserWithEmailAndPassword(
+      firebaseAuthService.firebaseAuth.createUserWithEmailAndPassword(
         email: createUserRequestModel.email!.trim(),
         password: createUserRequestModel.password!,
       ).then((value) {
 
         userId = value.user!.uid;
         preferenceHelper.saveDataSharedPreference(key: 'userId', value: userId);
-        FirebaseFirestore.instance.collection('users').doc(userId).set(
+        firebaseService.firestore.collection('users').doc(userId).set(
           createUserRequestModel.toJson(),
         );
         FirebaseFirestore.instance.collection('users').doc(userId).update({"userId" : userId});

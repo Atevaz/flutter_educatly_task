@@ -16,7 +16,7 @@ class SendMessageCubit extends Cubit<SendMessageState> {
 
 
   Future<void> sendMessage({required MessageModel messageModel}) async {
-    FirebaseFirestore.instance
+    firebaseService.firestore
         .collection('users')
         .doc(userId)
         .collection('chats')
@@ -29,7 +29,7 @@ class SendMessageCubit extends Cubit<SendMessageState> {
       emit(SendMessageErrorState());
     });
 
-    FirebaseFirestore.instance
+    firebaseService.firestore
         .collection('users')
         .doc(messageModel.receiverId)
         .collection('chats')

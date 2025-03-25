@@ -12,7 +12,7 @@ class UpdateUserStatusCubit extends Cubit<UpdateUserStatusState> {
   static UpdateUserStatusCubit get(context) => BlocProvider.of(context);
 
   Future<void> updateUserStatus({required bool status}) async {
-    await FirebaseFirestore.instance
+    await firebaseService.firestore
         .collection('users')
         .doc(userId)
         .update({"onlineStatus": status}).then((value) {

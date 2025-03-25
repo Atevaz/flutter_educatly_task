@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 
 import '../di/di.dart';
+import '../firebase/firebase_auth/firebase_auth_service.dart';
+import '../firebase/firebase_firestore/firestore_service.dart';
 import '../shared_preferences/preference_helper.dart';
 
 String? userId;
@@ -20,3 +22,5 @@ String convertDateToDate ({required String date}){
 }
 
 PreferenceHelper preferenceHelper = PreferenceHelper(preferencesProvider: sl());
+FirebaseService firebaseService = sl<FirebaseService>();
+FirebaseAuthService firebaseAuthService = sl<FirebaseAuthService>();

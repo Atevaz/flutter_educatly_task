@@ -1,4 +1,4 @@
-# flutter_educatly_task
+# Educatly 2024 - Flutter Real-Time Chat Application
 
 A new Flutter project.
 

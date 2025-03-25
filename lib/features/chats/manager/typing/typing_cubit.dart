@@ -16,7 +16,7 @@ class TypingCubit extends Cubit<TypingState> {
 
   Future<void> userTyping(
       {required String receiverId, required bool isUserTyping}) async {
-    FirebaseFirestore.instance
+    firebaseService.firestore
         .collection('users')
         .doc(receiverId)
         .collection('chats')
@@ -30,7 +30,7 @@ class TypingCubit extends Cubit<TypingState> {
 
   Future<void> listenToTyping({required String receiverId}) async {
     try{
-      FirebaseFirestore.instance
+      firebaseService.firestore
           .collection('users')
           .doc(userId)
           .collection('chats')

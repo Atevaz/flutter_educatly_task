@@ -21,7 +21,7 @@ class GetMessagesCubit extends Cubit<GetMessagesState> {
 
   Future<void> getMessages({required String receiverId}) async {
     emit(GetAllMessageLoadingState());
-    FirebaseFirestore.instance
+    firebaseService.firestore
         .collection('users')
         .doc(userId)
         .collection('chats')
