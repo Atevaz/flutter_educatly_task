@@ -1,0 +1,1 @@
+ /Users/apple/flutter_educatly_task/.dart_tool/flutter_build/e7343ebaefb24e07457cdde9fd94524c/native_assets.yaml: 
