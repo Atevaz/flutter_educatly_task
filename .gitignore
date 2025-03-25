@@ -1,0 +1,34 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+pubspec.lock
+
+# Flutter build directories
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+
+# Android Studio specific
+.idea/
+
+# VS Code specific
+.vscode/
+
+# macOS specific
+.idea/
+
+# iOS-specific build directories
+ios/Pods/
+ios/.symlinks/
+
+# Android-specific
+android/.gradle/
+android/app/build/
+
+# IntelliJ IDEA
+.idea/
+
+# Other unwanted files
+*.log
+*.bak
+*.swp
