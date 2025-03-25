@@ -14,6 +14,13 @@ This project is a simple real-time chat interface built using Flutter and Fireba
 ### Optional:
 - **Push Notifications**: Firebase Cloud Messaging is intended to be used to notify users of new messages, but this feature has not been fully implemented yet.
 
+## Project Structure
+```
+lib
+├── Core
+├── features
+└── main.dart
+```
 
 ### `core/`: Core functionalities such as Firebase initialization, network requests, app-wide configurations, etc.
 - `firebase/`: Firebase setup and configuration.
