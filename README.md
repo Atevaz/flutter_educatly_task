@@ -15,3 +15,28 @@ This project is a simple real-time chat interface built using Flutter and Fireba
 - **Push Notifications**: Firebase Cloud Messaging is intended to be used to notify users of new messages, but this feature has not been fully implemented yet.
 
 ## Project Structure
+lib/ ├── core/ │ ├── app_router/ │ ├── colors/ │ ├── constant/ │ ├── di/ │ ├── firebase/ │ ├── global_cubit/ │ ├── network/ │ ├── notification_service/ │ ├── repository/ │ ├── shared_preferences/ │ ├── styles/ │ └── widgets/ ├── features/ │ ├── auth/ │ ├── chats/ │ └── home/ ├── firebase_options.dart └── main.dart
+
+### `core/`: Core functionalities such as Firebase initialization, network requests, app-wide configurations, etc.
+- `firebase/`: Firebase setup and configuration.
+- `network/`: Network services to handle API requests.
+- `widgets/`: Commonly used Flutter widgets across the app.
+
+### `features/`: Main features of the app.
+- `auth/`: User authentication flow (sign up, login, logout).
+- `chats/`: Real-time messaging and chat-related logic.
+- `home/`: Main screen of the app where chats are displayed.
+
+## Setup Instructions
+
+### Prerequisites
+
+- Flutter 2.x or higher
+- Firebase account and Firebase project set up
+
+### 1. Clone the repository
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/educatly-flutter.git
+cd educatly-flutter
